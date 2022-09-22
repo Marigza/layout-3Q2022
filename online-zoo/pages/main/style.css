@@ -1,0 +1,357 @@
+/* roboto-300 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../assets/fonts/roboto-v30-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../../assets/fonts/roboto-v30-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../assets/fonts/roboto-v30-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../../assets/fonts/roboto-v30-latin-300.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/roboto-v30-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../../assets/fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../assets/fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../../assets/fonts/roboto-v30-latin-regular.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../assets/fonts/roboto-v30-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../../assets/fonts/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../assets/fonts/roboto-v30-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../../assets/fonts/roboto-v30-latin-700.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-900 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../assets/fonts/roboto-v30-latin-900.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../../assets/fonts/roboto-v30-latin-900.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../assets/fonts/roboto-v30-latin-900.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-900.woff') format('woff'),
+        /* Modern Browsers */
+        url('../../assets/fonts/roboto-v30-latin-900.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../../assets/fonts/roboto-v30-latin-900.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 4975px;*/
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ /*header styles start*/
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+.logo {
+    color: transparent;
+    width: 82px;
+    height: 52px;
+    background-image: url(../../assets/icons/logo-petonline-optimized.svg);
+}
+.wrapper {
+    width: 1160px;
+    height: 100%;
+    margin: auto;
+}
+
+.wrapper_header {
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_designed {
+    flex-grow: 1;
+    text-align: right;
+}
+.nav_list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 58px;
+}
+
+.header_link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.designed {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.designed:hover,
+.header_link:hover {
+    color: #F9804B;
+}
+
+.designed:active,
+.header_link:active {
+    color: #F9804B;
+}
+
+/*header styles end*/
+
+/*watch_online styles start*/
+
+.watch_online {
+    height: 700px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/images/Giant_Panda.jpg);
+}
+
+.wrapper_watch_online {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper_watch_online_item {
+    width: 50%;
+    height: 100%;
+}
+
+.watch_online_round {
+    position: relative;
+    top: 12px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    height: 465px;
+    width: 465px;
+    border-radius: 50%;
+}
+
+.watch_online_text {
+    position: absolute;
+    top: 74px;
+    left: 73px;
+    font-size: 106px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 75%;
+    text-align: center;
+}
+.watch_online_text_white {
+    color: #ffffff;
+}
+
+.watch_online_text_yellow {
+    color: #FFEE2E;
+}
+
+.watch_online_button {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.button_rounded {
+    height: 54px;
+    width: 298px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    line-height: 54px;
+}
+.button_rounded:hover {
+    background: #E47209;
+}
+.button_rounded:active {
+    background: #4B9200;
+}
+
+/*watch_online styles end*/
+
+/*backstage_pets styles start*/
+
+.backstage_pets {
+    position: relative;
+    height: 1862px;
+    width: 100%;
+}
+
+.flower {
+position: absolute;
+top: 12px;
+right: 0;
+width: 204px;
+height: 605px;
+background-image: url(../../assets/images/flower_foto1.jpg);
+}
+
+.palm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 292px;
+    height: 460px;
+    background-image: url(../../assets/images/palm_foto.jpg);
+}
+
+.strelitzia {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 368px;
+    height: 275px;
+    background-image: url(../../assets/images/strelitzia\ 1.jpg);
+}
+
+.backstage_pets_wrapper {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.backstage_maket {
+    height: 403px;
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.backstage_maket_foto{
+    background: url(../../assets/images/bamboo-cap.jpg);
+    height: 100%;
+    width: 609px;
+}
+
+.backstage_maket_text {
+    width: 465px;
+}
+
+.backstage_maket_text_header {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #333B41;
+}
+
+.backstage_maket_text_text{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.backstage_maket_text_how_work {
+    margin: 54px, 0, 34px, 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+}
+
+.pets_slider {
+    margin-top: 180px;
+    height: 872px;
+}
+.pets_slider_track {
+    display: flex;
+}
+
+/*backstage_pets styles end*/
+
+/*pick_and_feed styles start*/
+
+.pick_and_feed {
+    height: 1004px;
+    width: 100%;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+        linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+        linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+}
+
+/*pick_and_feed styles end*/
+
+/*testimonials styles start*/
+
+.testimonials {
+    height: 900px;
+    width: 100%;
+}
+
+/*testimonials styles end*/
+
+/*footer styles start*/
+
+.footer {
+    height: 443px;
+    width: 100%;
+    background-color: #111115;
+}
+
+/*footer styles end*/
