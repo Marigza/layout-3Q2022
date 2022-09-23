@@ -241,12 +241,12 @@ body {
 }
 
 .flower {
-position: absolute;
-top: 12px;
-right: 0;
-width: 204px;
-height: 605px;
-background-image: url(../../assets/images/flower_foto1.jpg);
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 204px;
+    height: 605px;
+    background-image: url(../../assets/images/flower_foto1.jpg);
 }
 
 .palm {
@@ -268,6 +268,8 @@ background-image: url(../../assets/images/flower_foto1.jpg);
 }
 
 .backstage_pets_wrapper {
+    position: relative;
+    z-index: 3;
     height: 100%;
     display: inline-block;
     width: 100%;
@@ -316,11 +318,134 @@ background-image: url(../../assets/images/flower_foto1.jpg);
 }
 
 .pets_slider {
+    position: relative;
     margin-top: 180px;
-    height: 872px;
+    margin-bottom: 80px;
+    
 }
+
+.pets_slider_container {
+    overflow: hidden;
+}
+
 .pets_slider_track {
     display: flex;
+    gap: 30px;
+}
+.pets_slider_items {
+    display: flex;
+    width: 366px;
+    flex-direction: column;
+    gap: 20px;
+}
+.pets_slider_foto {
+    position: relative;
+    margin: 0;
+    height: 426px;
+    border: 1px solid #FA6F32;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pets_slider_foto:hover:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.pets_slider_foto:hover .pets_slider_deskr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.pets_slider_foto:hover .pets_slider_image {
+    transform: scale(1.1);
+}
+
+.pets_slider_image {
+    margin-bottom: 5px;
+    transition: 0.2s all;
+}
+
+.pets_slider_deskr {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    transition: 1s all;
+}
+
+.pets_slider_deskr_container {
+    padding-left: 16px;
+}
+
+
+.pets_slider_image_animal {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.pets_slider_deskr_icon {
+    padding-right: 12px;
+}
+
+.button_choose{
+    width: 298px;
+    margin: 0 auto;
+}
+
+.button_slider_left {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: -82px;
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button_slider_right {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: -82px;
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);;
+    border-radius: 50%;
+}
+
+.button_slider_left::before {
+    content: url(../../assets/icons/Vector.svg);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) rotate(180deg);
+    left: 35%;
+}
+
+.button_slider_right::before {
+    content: url(../../assets/icons/Vector.svg);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 38%;
+}
+
+.button_slider_right:active,
+.button_slider_left:active {
+    background: #4B9200;
 }
 
 /*backstage_pets styles end*/
@@ -330,11 +455,19 @@ background-image: url(../../assets/images/flower_foto1.jpg);
 .pick_and_feed {
     height: 1004px;
     width: 100%;
+    display: inline-block;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
         linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
         linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
 }
 
+.pick_and_feed_block {
+    width: 100%;
+    height: 835px;
+    margin-top: 69px;
+    background: rgba(253, 253, 255, 0.52);
+    border-radius: 20px;
+}
 /*pick_and_feed styles end*/
 
 /*testimonials styles start*/
