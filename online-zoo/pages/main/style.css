@@ -170,7 +170,6 @@ body {
 
 .wrapper_header {
     height: 100%;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -295,6 +294,7 @@ body {
     position: relative;
     height: 1821px;
     width: 100%;
+    overflow: hidden;
 }
 
 .flower {
@@ -379,7 +379,6 @@ body {
     position: relative;
     margin-top: 180px;
     margin-bottom: 80px;
-    
 }
 
 .pets_slider_container {
@@ -568,6 +567,7 @@ pets_slider_image_habitat {
 
 .pick_and_feed_text2 {
     margin: 0;
+    width: 100%;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 16px;
@@ -680,7 +680,8 @@ testimonials_block {
 .testimonials_feedbacks_track {
     height: 100%;
     display: flex;
-    gap: calc(88px/3);
+    justify-content: space-between;
+    /*gap: calc(88px/3);*/
 }
 
 .testimonials_feedbacks_item {
@@ -895,21 +896,24 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #111115;
 }
 
-.footer_container {
-    display: flex;
-    align-items: flex-end;
+wrapper_footer {
+    display: inline-block;
 }
 
-.footer_social {
-    width: 300px;
-    /*height:*/
+.footer_container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 353px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.footer_logo_button {
+    width: 68.5%;
+    height: 50%;
 }
 
 .footer_logo {
-    margin-top: 39px;
+    display: block;
     color: transparent;
     width: 82px;
     height: 52px;
@@ -920,11 +924,49 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: 68px;
 }
 
-.footer_social_link {
-    margin-top: 46px;
+.footer_subscribe {
     display: flex;
     flex-direction: column;
+    align-items: end;
+    width: 31.5%;
+    height: 50%;
+}
+
+.footer_form_title {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.footer_social {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     gap: 10px;
+}
+.footer_nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer_designed {
+    min-width: 20%;
+    display: flex;
+    justify-content: end;
+    /*align-items: flex-end;*/
+    flex-direction: column;
+    gap: 13px;
+    text-align: start;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
 }
 
 .footer_social_link_item {
@@ -991,14 +1033,11 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #4B9200;    
 }
 
-.footer_nav {
-    margin-left: 98px;
-}
-
 .footer_nav_list {
-    margin: 0;
+    margin: 0 0 0 8px;
     padding: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: no-wrap;
     list-style-type: none;
     gap: 59px;
@@ -1009,25 +1048,11 @@ input[type=range]:focus::-ms-fill-upper {
     text-decoration: none;
 }
 
-.footer_subscribe{
-    margin-left: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 215px;
-}
-
-.footer_form_title{
-    margin-bottom: 15px;
-    font-size: 24px;
-    line-height: 120%;
-    color: #FFFFFF;
-}
-
 .footer_form_email{
     width: 228px;
     height: 42px;
     box-sizing: border-box;
+    margin-right: 4px;
     border: 1px solid #F9804B;
     padding: 10px;
     background-color: transparent;
@@ -1066,15 +1091,6 @@ input::placeholder {
     color: #4B9200;
 }
 
-.footer_designed {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 130%;
-    color: #FFFFFF;
-}
 
 .footer_designed:hover,
 .footer_designed:active {
@@ -1082,3 +1098,186 @@ input::placeholder {
 }
 
 /*footer styles end*/
+
+/*media start*/
+@media screen and (max-width: 1590px) {
+    .backstage_pets {
+        height: 2100px;
+    }
+}
+@media screen and (max-width: 1530px) {
+    .flower {
+        display: none;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .backstage_pets {
+        height: 1900px;
+    }
+    .button_slider_left {
+        left: 320px;
+        box-shadow: none;
+    }
+    .button_slider_right {
+        right: 320px;
+    }
+    .pets_slider_items { 
+        gap: 90px;
+    }
+    .palm {
+        left: -8px;
+        background: url(../../assets/images/palm_foto_small.jpg) no-repeat bottom left;       
+    }
+    .strelitzia {
+        right: -10px;
+        background: url(../../assets/images/strelitzia_small.jpg) no-repeat bottom right;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 940px;
+    }   
+    .nav_list {
+        gap: 48px;
+    }
+    .watch_online {
+        height: 504px;
+        overflow: hidden;
+        /*width: 1198px;
+        overflow: hidden;
+        background-size: cover;
+        background: url(../../assets/images/Giant_Panda.jpg) no-repeat center;*/
+    }
+
+    .watch_online_round {
+        height: 367px;
+        width: 367px;
+        left: -45px;
+        top: -10px;
+    }
+    .watch_online_text {
+        top: 54px;
+        left: 68px;
+        font-size: 85px;
+    }
+    .watch_online_button {
+        margin-top: 40px;
+    }
+    .backstage_pets {
+        height: 1745px;
+    }
+    .backstage_maket {
+        margin-top: 100px;
+        height: 408px;
+    }
+    .backstage_maket_foto {
+        margin-top: 10px;
+        background: url(../../assets/images/bamboo-cap_small.jpg);
+        width: 455px;
+    }
+    .backstage_maket_text_header {
+        box-sizing: border-box;
+            margin-bottom: 20px;
+    }
+    .backstage_maket_text {
+        width: 454px;
+    }
+    .pets_slider {
+        margin-top: 160px;
+    }
+    .pets_slider_track {
+        gap: 28px;
+    }
+    .pets_slider_foto {
+        height: 354px;
+    }
+    .pets_slider_image {
+        width: 292px;
+        height: 292px;
+    }
+    .button_choose {
+        box-shadow: none;    
+    }
+    .pick_and_feed {
+        height: 876px;
+    }
+    .pick_and_feed_block {
+        height: 796px;
+        margin-top: 28px;
+    }
+    .pick_and_feed_header {
+        margin: 31px 0 20px 0;
+    }
+    .pick_and_feed_text {
+        margin-bottom: 40px;
+    }
+    .pick_and_feed_text1 {
+        margin-bottom: 20px;
+    }
+    .pick_and_feed_text2 {
+        box-sizing: border-box;
+        padding-right: 80px;
+    }
+    .pick_and_feed_text3 {
+       width: 800px;
+    }
+    .pick_and_feed_icons {
+        margin: 0 0 50px 3px;
+        gap: 29px;
+    }
+    .testimonials_header {
+        margin: 100px auto 0 auto;    
+    }
+    .testimonials_feedbacks_container {
+        margin-top: 27px;
+    }
+    .testimonials_feedbacks_track {
+        gap: 30px;
+    }
+    .testimonials_feedbacks_item {
+        width: 293px;
+    }
+    .testimonials_feedbacks_item:nth-child(2) {
+        display: none;
+    }
+    .testimonials_slidebar {
+        width: 390px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        width: 75px;
+    }
+    input[type=range]::-moz-range-thumb {
+        width: 75px;
+    }
+    input[type=range]::-ms-thumb {
+        width: 75px;
+    }
+    .testimonials_button {
+        margin-top: 43px;
+        margin-bottom: 140px;
+    }
+    .leaf {
+        bottom: -86px;
+        right: 0;
+        width: 196px;
+        height: 325px;
+        background: url(../../assets/images/leav_foto_small.jpg) center no-repeat;
+        }
+    .footer_logo_button {
+        width: 58%;
+    }
+    .footer_subscribe {
+        width: 42%;
+        align-items: flex-start;
+    }
+    .footer_nav_list {
+        gap: 49px;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .watch_online {
+        background: url(../../assets/images/Giant_Panda3.jpg) no-repeat center;
+    }
+    
+}

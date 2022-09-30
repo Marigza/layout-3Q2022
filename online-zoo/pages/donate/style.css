@@ -524,21 +524,25 @@ input{
     background-color: #111115;
 }
 
-.footer_container {
-    display: flex;
-    align-items: flex-end;
+wrapper_footer {
+    display: inline-block;
 }
 
-.footer_social {
-    width: 300px;
-    /*height:*/
+.footer_container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 353px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer_logo_button {
+    width: 68.5%;
+    height: 50%;
 }
 
 .footer_logo {
-    margin-top: 39px;
+    display: block;
     color: transparent;
     width: 82px;
     height: 52px;
@@ -572,11 +576,50 @@ input{
     background: #4B9200;
 }
 
-.footer_social_link {
-    margin-top: 46px;
+.footer_subscribe {
     display: flex;
     flex-direction: column;
+    align-items: end;
+    width: 31.5%;
+    height: 50%;
+}
+
+.footer_form_title {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.footer_social {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     gap: 10px;
+}
+
+.footer_nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer_designed {
+    min-width: 20%;
+    display: flex;
+    justify-content: end;
+    /*align-items: flex-end;*/
+    flex-direction: column;
+    gap: 13px;
+    text-align: start;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
 }
 
 .footer_social_link_item {
@@ -644,14 +687,11 @@ input{
     background-color: #4B9200;
 }
 
-.footer_nav {
-    margin-left: 98px;
-}
-
 .footer_nav_list {
-    margin: 0;
+    margin: 0 0 0 8px;
     padding: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: no-wrap;
     list-style-type: none;
     gap: 59px;
@@ -662,25 +702,11 @@ input{
     text-decoration: none;
 }
 
-.footer_subscribe {
-    margin-left: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 215px;
-}
-
-.footer_form_title {
-    margin-bottom: 15px;
-    font-size: 24px;
-    line-height: 120%;
-    color: #FFFFFF;
-}
-
 .footer_form_email {
     width: 228px;
     height: 42px;
     box-sizing: border-box;
+    margin-right: 4px;
     border: 1px solid #F9804B;
     padding: 10px;
     background-color: transparent;
@@ -721,15 +747,6 @@ input::placeholder {
     color: #4B9200;
 }
 
-.footer_designed {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 130%;
-    color: #FFFFFF;
-}
 
 .footer_designed:hover,
 .footer_designed:active {
