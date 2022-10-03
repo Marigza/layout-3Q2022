@@ -161,7 +161,9 @@ body {
     text-align: center;
     text-decoration: none;
 }
-
+.header_burger_menu {
+    display: none;
+}
 .wrapper {
     width: 1160px;
     height: 100%;
@@ -270,7 +272,7 @@ body {
 .pick_and_feed_block{
     box-sizing: border-box;
     padding: 40px 92px 62px 92px;
-    width: 1160px;
+    width: 100%;
     height: 964px;
     margin: auto;
     margin-top: 60px;
@@ -306,10 +308,11 @@ body {
     margin: 60px 200px 48px 230px;
 }
 
-.pick_and_feed_block_pucture_number{
+.pick_and_feed_block_pucture_number {
     margin-bottom: 50px;
     height: fit-content;
     display: flex;
+    gap: 10px;
 }
 
 .pick_and_feed_block_pucture_number_number{
@@ -336,7 +339,7 @@ body {
 }
 
 .pick_and_feed_block_pucture_number_icon {
-    width: 62px;
+    width: 50px;
     height: 58px;
     background: url(../../assets/icons/4.svg) center no-repeat;
 }
@@ -775,20 +778,30 @@ input::placeholder {
 .pick_and_feed_block {
     box-sizing: border-box;
     padding: 20px 0 0 0;
-    width: 940px;
     height: 918px;
-    margin-top: 40px;
+    margin-top: 44px;
 }
 .pick_and_feed_block_text {
     padding-top: 10px;
     text-align: center;
 }
+.pick_and_feed_block_pucture {
+    margin: 60px 0 48px 195px;
+}
 .pick_and_feed_block_scale {
-    margin: 0 auto 95px auto;
-    width: 830px;
+    margin: 0 auto 98px auto;
+    width: 810px;
 }
 .pick_and_feed_block_scale_graf_form_label:first-child {
     display: none;
+}
+.pick_and_feed_block_amount {
+    width: 268px;
+}
+.block_amount_form_number {
+    width: 264px;
+    height: 52px;
+    
 }
  .footer_logo_button {
      width: 58%;
@@ -798,70 +811,108 @@ input::placeholder {
      align-items: flex-start;
  }
  .footer_nav_list {
-     gap: 49px;
- }
- }
+    margin: 0 0 0 37px;
+    gap: 49px;
+}
+}
  @media screen and (max-width: 960px) {
-     .wrapper {
-         width: 600px;
-     }
-
-     .nav_list {
-         gap: 15px;
-     }
-         .footer {
-             height: 282px;
-         }
-    
-         .footer_container {
-             margin-top: 12px;
-             margin-bottom: 12px;
-             height: 258px;
-         }
-    
-         .footer_subscribe {
-             display: none;
-         }
-    
-         .footer_logo_button {
-             width: 50%;
-             height: fit-content;
-         }
-    
-         .footer_social {
-             width: 50%;
-             height: fit-content;
-             justify-content: flex-start;
-             gap: 20px;
-         }
-    
-         .footer_social_link_item {
-             justify-content: end;
-    
-         }
-    
-         .footer_social_link_item_text {
-             display: none;
-         }
-    
-         .footer_nav {
-             width: 50%;
-         }
-    
-         .footer_nav_list {
-             margin: 0;
-             justify-content: space-between;
-             gap: 0;
-         }
-    
-         .footer_designed {
-             width: 50%;
-             text-align: end;
-         }
-    
-         .footer_button {
-             margin-top: 30px;
-         }
+    .wrapper {
+        width: 600px;
+    }
+    .nav_list {
+        gap: 15px;
+    }
+    .zoos_heed_help {
+        width: 100%;
+        padding-top: 30px;
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .zoos_heed_help_text {
+        margin: 20px 5px 0 0;
+    }
+    .donation_info {
+        margin-top: 30px;
+    }
+    .pick_and_feed_block {
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    .pick_and_feed_block_text {
+            padding-top: 20px;
+    }
+    .pick_and_feed_block_pucture {
+        margin: 50px 41px 40px 27px;
+    }
+    .pick_and_feed_block_scale {
+        width: 100%;
+    }
+    .pick_and_feed_block_scale_text {
+            padding-left: 10px;
+            margin-bottom: 7px;
+    }
+    .pick_and_feed_block_scale_graf_form_label:nth-child(2) {
+        display: none;
+        }
+    .pick_and_feed_block_scale_graf_form_label:nth-child(3) {
+        display: none;
+    }
+    .pick_and_feed_block_amount {
+        width: 180px;
+    }
+    .block_amount_form_number {
+        box-sizing: border-box;
+        width: 180px;
+        height: 42px;
+    }
+    .pick_and_feed_block_regularity {
+            margin: 30px auto 30px auto;
+    }
+    .footer {
+        height: 282px;
+    }
+    .footer_container {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        height: 258px;
+    }
+    .footer_subscribe {
+        display: none;
+    }
+    .footer_logo_button {
+        width: 50%;
+        height: fit-content;
+    }
+    .footer_social {
+        width: 50%;
+        height: fit-content;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .footer_social_link_item {
+        justify-content: end;
+    }
+    .footer_social_link_item_text {
+        display: none;
+    }
+    .footer_nav {
+        width: 50%;
+    }
+    .footer_nav_list {
+        margin: 0;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .footer_designed {
+        width: 50%;
+        text-align: end;
+    }
+        .footer_designed_first {
+            padding-right: 7px;
+        }
+    .footer_button {
+        margin-top: 30px;
+    }
 }
 @media screen and (max-width: 645px) {
     .header {
@@ -870,14 +921,12 @@ input::placeholder {
         z-index: 9;
         height: 34px;
     }
-
     .logo {
         width: 47px;
         height: 29px;
         border: none;
         padding: 0;
     }
-
     .bamboo {
         left: 3px;
         bottom: 0px;
@@ -885,26 +934,21 @@ input::placeholder {
         height: 14px;
         background-image: url(../../assets/icons/bamboo-tablet.svg);
     }
-
     .logo_link {
         font-size: 13px;
     }
-
     .header_burger_menu {
         display: block;
     }
-
     .burger_menu_icon {
         width: 24px;
         height: 22px;
         background-color: transparent;
         background: url(../../assets/icons/burger_menu.svg) center no-repeat;
     }
-
     .header_designed {
         display: none;
     }
-
     .header-nav {
         display: none;
     }
@@ -919,7 +963,72 @@ input::placeholder {
     }
     .panda {
         height: 187px;
-        background-image: url(../../assets/images/panda_donate_mobile.jpg);
+        background: url(../../assets/images/panda_donate_mobile.jpg) center;
+    }
+    .pick_and_feed {
+        height: 1145px;
+    }
+    .zoos_heed_help_text {
+            margin: 20px 5px 0 0;
+        }
+    .donation_info {
+        margin-top: 25px;
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .pick_and_feed_block {
+        height: 591px;
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+    .pick_and_feed_block_header {
+        font-size: 24px;
+    }
+    .pick_and_feed_block_text {
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .pick_and_feed_block_pucture {
+        display: block;
+        margin: 10px 0 0 0;
+        width: 100%;
+        height: 139px;
+        background-image: url(../../assets/icons/days_and_animals.svg);
+    }
+    .pick_and_feed_block_pucture_number { display: none;}
+    .pick_and_feed_block_pucture_number_number { display: none;}
+    .pick_and_feed_block_pucture_number_text { display: none;}
+    .pick_and_feed_block_pucture_number_operator { display: none;}
+    .pick_and_feed_block_pucture_number_icon { display: none;}
+    .pick_and_feed_block_pucture_icon { display: none;}
+    .pick_and_feed_block_scale_text {
+            padding-left: 0;
+            margin-top: 3px;
+            margin-bottom: 7px;
+    }
+    .pick_and_feed_block_scale {
+        margin-bottom: 50px;
+    }
+    .pick_and_feed_block_scale_graf_form_label {
+        gap: 10px;
+        padding-top: 4.5px;
+    }
+    .pick_and_feed_block_scale_graf_form_input {
+        width: 5px;
+        height: 5px;
+    }
+    .pick_and_feed_block_scale_graf_form_label_text {
+        font-size: 13px;
+    }
+    .pick_and_feed_block_scale_graf {
+        height: 14px;
+    }
+    .pick_and_feed_block_regularity {
+        margin: 27px auto 25px auto;
+    }
+    .pick_and_feed_block_share {
+        width: 301px;
     }
     .footer {
         height: 334px;
