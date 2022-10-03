@@ -207,6 +207,9 @@ body {
     color: #F9804B;
 }
 
+.header_burger_menu {
+    display: none;
+}
 /*header styles end*/
 
 /*watch_online styles start*/
@@ -391,6 +394,7 @@ body {
 }
 .pets_slider_items {
     display: flex;
+    box-sizing: border-box;
     width: 366px;
     flex-direction: column;
     gap: 20px;
@@ -399,6 +403,7 @@ body {
     position: relative;
     margin: 0;
     height: 424px;
+    box-sizing: border-box;
     border: 1px solid #FA6F32;
     border-radius: 5px;
     overflow: hidden;
@@ -463,7 +468,9 @@ pets_slider_image_habitat {
 .pets_slider_deskr_icon {
     padding-right: 12px;
 }
-
+.pets_slider_deskr_icon_small {
+    display: none;
+}
 .button_choose{
     width: 298px;
     margin: 0 auto;
@@ -599,14 +606,14 @@ pets_slider_image_habitat {
 
 .pick_and_feed_icons {
     display: flex;
-    margin: 0 0 45px 9px;
+    margin: 0 0 65px 9px;
     gap: 30px;
 }
 
 .pick_and_feed_icon {
     margin: 0;
     width: 168px;
-    height: 264px;
+    height: 244px;
 }
 
 .pick_and_feed_icon_block {
@@ -632,7 +639,9 @@ pets_slider_image_habitat {
 .pick_and_feed_vector {
     padding-top: 60px;
 }
-
+.pick_and_feed_vector_green {
+    display: none;
+}
 /*pick_and_feed styles end*/
 
 /*testimonials styles start*/
@@ -967,6 +976,10 @@ wrapper_footer {
     font-size: 16px;
     line-height: 130%;
     color: #FFFFFF;
+    cursor: pointer;
+}
+.footer_designed_first {
+    margin-right: 9px;
 }
 
 .footer_social_link_item {
@@ -1144,10 +1157,6 @@ input::placeholder {
     .watch_online {
         height: 504px;
         overflow: hidden;
-        /*width: 1198px;
-        overflow: hidden;
-        background-size: cover;
-        background: url(../../assets/images/Giant_Panda.jpg) no-repeat center;*/
     }
 
     .watch_online_round {
@@ -1159,7 +1168,10 @@ input::placeholder {
     .watch_online_text {
         top: 54px;
         left: 68px;
+        font-style: normal;
+        font-weight: 700;
         font-size: 85px;
+        line-height: 75%;
     }
     .watch_online_button {
         margin-top: 40px;
@@ -1178,7 +1190,7 @@ input::placeholder {
     }
     .backstage_maket_text_header {
         box-sizing: border-box;
-            margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     .backstage_maket_text {
         width: 454px;
@@ -1223,7 +1235,7 @@ input::placeholder {
        width: 800px;
     }
     .pick_and_feed_icons {
-        margin: 0 0 50px 3px;
+        margin: 0 0 70px 3px;
         gap: 29px;
     }
     .testimonials_header {
@@ -1259,7 +1271,7 @@ input::placeholder {
     }
     .leaf {
         bottom: -86px;
-        right: 0;
+        right: -7px;
         width: 196px;
         height: 325px;
         background: url(../../assets/images/leav_foto_small.jpg) center no-repeat;
@@ -1279,5 +1291,300 @@ input::placeholder {
     .watch_online {
         background: url(../../assets/images/Giant_Panda3.jpg) no-repeat center;
     }
+}
+@media screen and (max-width: 960px) {
+    .wrapper {
+        width: 600px;
+    }
+    .nav_list {
+        gap: 15px;
+    }
+    .wrapper_watch_online_item:first-child{
+        display: none;
+    }
+    .wrapper_watch_online_item {
+        width: 100%;
+    }
+    .watch_online_round {
+        height: 237.6px;
+        width: 237.6px;  
+        left: 310px;
+        top: 10px;
     
+    }
+    .watch_online_text {
+        top: 39px;
+        left: 43px;
+        font-size: 54.2894px;
+    }
+    .flower {
+        display: block;
+        position: absolute;
+        top: -5px;
+        right: -7px;
+        width: 132px;
+        height: 476px;
+        background-image: url(../../assets/images/flower_foto_tablet.jpg);
+    }
+    .palm {
+        background: url(../../assets/images/palm_foto_tablet.jpg) no-repeat bottom left;
+    }
+    .strelitzia {
+        background: url(../../assets/images/strelitzia_tablet.jpg) no-repeat bottom right;
+    }
+    .backstage_pets {
+            height: 1478px;
+    }
+    .backstage_maket{
+        height: 367px;
+        margin-top: 60px;
+    }
+    .backstage_maket_text_header {
+        width: 495px;
+        margin-left: 5px;
+    }
+    .backstage_maket_text_how_work {
+        margin: 30px 0 20px 5px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 120%;
+            color: #333B41;
+        }
+    .backstage_maket_text {
+            width: 495px;
+    }
+    .backstage_maket_foto {
+        display: none;
+    }
+    .pets_slider {
+        margin-top: 80px;
+        margin-bottom: 62px;
+    }
+    .pets_slider_deskr_container {
+            padding-left: 12px;
+    }
+    .pets_slider_image_animal {
+        font-size: 12.4695px;
+        font-weight: 500;
+    }
+    .pets_slider_image_habitat {  
+        font-size: 11.6901px;
+        letter-spacing: normal;
+    }
+    .pets_slider_deskr_icon {
+       /*width: 20px;
+        height: 20px;*/
+            padding-right: 6px;
+        }
+    .pets_slider_deskr_icon_big {
+        display: none;
+    }
+    .pets_slider_deskr_icon_small {
+        display: inline;
+    }
+    .pets_slider_foto {
+        height: 332px;
+    }
+    .pets_slider_image {
+            width: 283px;
+            height: 283px;
+    }
+    .button_slider_left {
+             left: 223px;
+    }
+    .button_slider_right {
+             right: 223px;
+    }
+    .pick_and_feed {
+        height: 781px;
+    }
+    .pick_and_feed_block {
+        height: 741px;
+        margin-top: 20px;
+    }
+    .pick_and_feed >.wrapper  {
+        width: 100%;
+    }
+    .pick_and_feed_header {
+            margin: 10px 0 17px 0;
+        font-size: 42px;
+    }
+    .pick_and_feed_text {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 31px;
+    }
+    .pick_and_feed_text1 {
+        font-size: 22px;
+    }
+    .pick_and_feed_text2 {
+        padding-right: 0;
+        font-weight: 500;
+    }
+    .pick_and_feed_text3 {
+        width: 100%;
+    }
+    .pick_and_feed_how_work {
+        margin-bottom: 20px;
+    }
+    .pick_and_feed_icons {
+        gap: 10px;
+    }
+    .testimonials_header {
+        margin: 60px auto 0 auto;
+    }
+    .testimonials_feedbacks_item:nth-child(3) {
+        display: none;
+    }
+    .footer {
+        height: 282px;
+    }
+    .footer_container {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            height: 258px;
+    }
+    .footer_subscribe {
+        display: none;
+    }
+    .footer_logo_button {
+        width: 50%;
+        height: fit-content;
+    }
+    .footer_social {
+        width: 50%;
+        height: fit-content;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .footer_social_link_item {
+        justify-content: end;
+        
+    }
+    .footer_social_link_item_text {
+        display: none;
+    }
+    .footer_nav {
+        width: 50%;
+    }
+    .footer_nav_list {
+        margin: 0;
+        justify-content: space-between;
+        gap: 0;
+        }
+    .footer_designed {
+        width: 50%;
+        text-align: end;
+    }
+
+    .footer_button {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .pick_and_feed_icons {
+        position: relative;
+        justify-content: space-between;
+        gap: 44px;
+        margin: 0 12px 40px 0;
+    }
+    .pick_and_feed_vector_image {
+        display: none;
+    }
+    .pick_and_feed_vector_green {
+        display: block;
+        background-color: transparent;
+    }
+    .pick_and_feed_vector {
+        position: absolute;
+        top: -15px;
+        left: 140px;
+        padding: 0;
+    }
+    .pick_and_feed_vector:nth-child(2) {
+        left: 348px;
+    }
+}
+@media screen and (max-width: 645px) {
+    .header {
+        height: 34px;
+    }
+    .logo {
+        width: 47px;
+        height: 29px;
+        border: none;
+        padding: 0;
+    }
+    .bamboo {
+        left: 3px;
+        bottom: 0px;
+        width: 9px;
+        height: 14px;
+        background-image: url(../../assets/icons/bamboo-tablet.svg);
+    }
+    .logo_link {
+        font-size: 13px;
+    }
+    .header_burger_menu {
+        display: block;
+    }
+    .burger_menu_icon {
+        width: 24px;
+        height: 22px;
+        background-color: transparent;
+        background: url(../../assets/icons/burger_menu.svg) center no-repeat;
+    }
+    .header_designed {
+        display: none;
+    }
+    .header-nav {
+        display: none;
+    }
+    .watch_online {
+        height: 339px;
+        background: url(../../assets/images/Giant_Panda_tablet.jpg) no-repeat center;
+    }
+    .watch_online_button {
+        position: absolute;
+        bottom: -47px;
+        left: -352px;
+        margin: 0;
+    }
+    .testimonials_feedbacks_container {
+        margin-top: 30px;
+        height: fit-content;
+        }
+    .testimonials_feedbacks_track {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .testimonials_feedbacks_item:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+    }
+    .testimonials_feedbacks_item {
+        height: 109px;
+        width: 100%;
+        padding: 12px 29px 8px 10px;
+    }
+    .feedbacks_item_text_block {
+        width: 100%;
+    }
+    .testimonials_slidebar {
+        display: none;
+    }
+    .testimonials_button {
+        width: fit-content;
+        margin: 40px auto 80px auto;
+    }
+    .testimonials_button>.button_squared {
+        width: 240px;
+    }
+    .leaf {
+        bottom: -68px;
+        right: -7px;
+        width: 116px;
+        height: 204px;
+        background: url(../../assets/images/leav_foto_tablet.jpg) center no-repeat;
+    }
 }
