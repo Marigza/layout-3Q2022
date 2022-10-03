@@ -509,9 +509,6 @@ input{
     text-align: center;
 }
 
-
-
-
 /*Pick_and_feed styles end*/
 
 /*footer styles start*/
@@ -712,7 +709,9 @@ wrapper_footer {
     background-color: transparent;
     color: #BDBDBD;
 }
-
+.footer>.wrapper {
+    height: fit-content;
+}
 input.footer_form_email:hover {
     border: 1px solid #4B9200;
 }
@@ -746,11 +745,238 @@ input::placeholder {
     border: 1px solid #4B9200;
     color: #4B9200;
 }
-
-
 .footer_designed:hover,
 .footer_designed:active {
     color: #4B9200;
 }
 
 /*footer styles end*/
+
+ /* media start*/
+@media screen and (max-width: 1200px) {
+ .wrapper {
+     width: 940px;
+ }
+ .nav_list {
+     gap: 48px;
+ }
+.panda {
+    background-image: url(../../assets/images/panda_donate_small.jpg);
+}
+.zoos_heed_help {
+    width: 778px;
+}
+.zoos_heed_help_text {
+    margin: 30px 10px 0 0;
+}
+.pick_and_feed {
+    height: 1333px;
+}
+.pick_and_feed_block {
+    box-sizing: border-box;
+    padding: 20px 0 0 0;
+    width: 940px;
+    height: 918px;
+    margin-top: 40px;
+}
+.pick_and_feed_block_text {
+    padding-top: 10px;
+    text-align: center;
+}
+.pick_and_feed_block_scale {
+    margin: 0 auto 95px auto;
+    width: 830px;
+}
+.pick_and_feed_block_scale_graf_form_label:first-child {
+    display: none;
+}
+ .footer_logo_button {
+     width: 58%;
+ }
+ .footer_subscribe {
+     width: 42%;
+     align-items: flex-start;
+ }
+ .footer_nav_list {
+     gap: 49px;
+ }
+ }
+ @media screen and (max-width: 960px) {
+     .wrapper {
+         width: 600px;
+     }
+
+     .nav_list {
+         gap: 15px;
+     }
+         .footer {
+             height: 282px;
+         }
+    
+         .footer_container {
+             margin-top: 12px;
+             margin-bottom: 12px;
+             height: 258px;
+         }
+    
+         .footer_subscribe {
+             display: none;
+         }
+    
+         .footer_logo_button {
+             width: 50%;
+             height: fit-content;
+         }
+    
+         .footer_social {
+             width: 50%;
+             height: fit-content;
+             justify-content: flex-start;
+             gap: 20px;
+         }
+    
+         .footer_social_link_item {
+             justify-content: end;
+    
+         }
+    
+         .footer_social_link_item_text {
+             display: none;
+         }
+    
+         .footer_nav {
+             width: 50%;
+         }
+    
+         .footer_nav_list {
+             margin: 0;
+             justify-content: space-between;
+             gap: 0;
+         }
+    
+         .footer_designed {
+             width: 50%;
+             text-align: end;
+         }
+    
+         .footer_button {
+             margin-top: 30px;
+         }
+}
+@media screen and (max-width: 645px) {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+        height: 34px;
+    }
+
+    .logo {
+        width: 47px;
+        height: 29px;
+        border: none;
+        padding: 0;
+    }
+
+    .bamboo {
+        left: 3px;
+        bottom: 0px;
+        width: 9px;
+        height: 14px;
+        background-image: url(../../assets/icons/bamboo-tablet.svg);
+    }
+
+    .logo_link {
+        font-size: 13px;
+    }
+
+    .header_burger_menu {
+        display: block;
+    }
+
+    .burger_menu_icon {
+        width: 24px;
+        height: 22px;
+        background-color: transparent;
+        background: url(../../assets/icons/burger_menu.svg) center no-repeat;
+    }
+
+    .header_designed {
+        display: none;
+    }
+
+    .header-nav {
+        display: none;
+    }
+    .panda {
+        height: 335px;
+        background-image: url(../../assets/images/panda_donate_tablet.jpg);
+    }
+}
+@media screen and (max-width: 620px) {
+    .wrapper {
+        width: 300px;
+    }
+    .panda {
+        height: 187px;
+        background-image: url(../../assets/images/panda_donate_mobile.jpg);
+    }
+    .footer {
+        height: 334px;
+    }     
+    .footer>.wrapper {
+        height: fit-content;
+    }       
+    .wrapper_footer {
+        height: fit-content;
+    }   
+    .footer_container {
+        position: relative;
+        height: 294px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }      
+    .footer_logo_button {
+        width: 100%;
+    }      
+    .footer_logo {
+        background-image: none;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }     
+    .footer_logo::before {
+        background: url(../../assets/icons/bamboo.svg) no-repeat;
+        background-position: top -10% right 38%;
+        content: 'PetStory online';
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 120%;
+    }      
+    .footer_button {
+        margin-top: 86px;
+    }      
+    .footer_social {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 28px;
+    }
+    .footer_nav {
+        width: 95%;
+        margin: 0 auto;
+        flex-grow: 0;
+        order: 3;
+    }     
+    .footer_designed {
+        width: 100%;
+        margin: 30px 0 30px 0;
+        font-size: 15px;
+    }
+}
