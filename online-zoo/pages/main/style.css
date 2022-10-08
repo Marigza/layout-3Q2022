@@ -117,21 +117,7 @@ body {
 }
 
 .modal_container {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.2s all linear;
-    background-color: rgba(0, 0, 0, 0.25);
-}
-.modal_container_active {
-    visibility: visible;
-    opacity: 1;
+    display: none;
 }
 
  /*header styles start*/
@@ -702,7 +688,9 @@ testimonials_block {
     height: 391px;
     overflow: hidden;
 }
-
+testimonials_feedbacks_item_close {
+    display: none;
+}
 .testimonials_feedbacks_track {
     height: 100%;
     display: flex;
@@ -1528,7 +1516,7 @@ input::placeholder {
     .header {
         position: sticky;
         top: 0;
-        z-index: 9;
+        z-index: 12;
         height: 34px;
     }
     .logo {
@@ -1547,6 +1535,23 @@ input::placeholder {
     .logo_link {
         font-size: 13px;
     }
+    .modal_container {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s all linear;
+            background-color: rgba(0, 0, 0, 0.25);
+    }
+    .modal_container_active {
+            visibility: visible;
+            opacity: 1;
+        }
     .header_burger_menu {
         display: block;
         cursor: pointer;
@@ -1624,6 +1629,8 @@ input::placeholder {
     .testimonials_feedbacks_container {
         margin-top: 30px;
         height: fit-content;
+        position: static;
+        z-index: 8;
     }
     .testimonials_feedbacks_track {
         flex-direction: column;
@@ -1636,8 +1643,41 @@ input::placeholder {
     .testimonials_feedbacks_item {
         height: 109px;
         width: 100%;
+        z-index: 8;
         padding: 12px 29px 8px 10px;
+        cursor: pointer;
     }
+    .testimonials_feedbacks_item_active {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 12;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            width: 268px;
+            height: 391px;
+            background: #F1F3F2;
+            border-radius: 20px;
+            border: 2px solid pink;
+            box-sizing: border-box;
+            padding: 15px 14px 19px 16px;
+    }
+    .testimonials_feedbacks_item_close {
+        display: block;
+        visibility: hidden;
+        position: fixed;
+        z-index: 12;
+        top: 20%;
+        right: 15%;
+        width: 30px;
+        height: 30px;
+        /*padding: 10px 0 0 10px;*/
+        background: url(../../assets/icons/x_iconOrange.svg) center no-repeat;
+        background-color: #F5F7F6;
+        cursor: pointer;
+    }
+
     .feedbacks_item_text_block {
         width: 100%;
     }

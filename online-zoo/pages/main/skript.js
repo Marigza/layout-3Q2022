@@ -20,3 +20,30 @@
     });
 }());
 
+// testimonials popup
+
+(function () {
+    const modal = document.querySelector('.modal_container');
+    const feedbackCloseItem = document.querySelector('.testimonials_feedbacks_item_close');
+    const feedbacks = document.querySelectorAll('.testimonials_feedbacks_item');
+
+    if (window.innerWidth <= 645) {
+        for (let i = 0; i < feedbacks.length; i += 1) {
+            feedbacks[i].addEventListener('click', () => {
+                feedbacks[i].classList.add('testimonials_feedbacks_item_active');
+                modal.classList.add('modal_container_active');
+                feedbackCloseItem.style.visibility = "visible";
+            }); 
+            modal.addEventListener('click', () => {
+                modal.classList.remove('modal_container_active');
+                feedbacks[i].classList.remove('testimonials_feedbacks_item_active');
+                feedbackCloseItem.style.visibility = "hidden";
+            });
+            feedbackCloseItem.addEventListener('click', () => {
+                modal.classList.remove('modal_container_active');
+                feedbacks[i].classList.remove('testimonials_feedbacks_item_active');
+                feedbackCloseItem.style.visibility = "hidden";
+            });
+        }
+    }
+}());
