@@ -454,14 +454,38 @@ input{
     width: 270px;
     margin: 0 auto;
 }
-
+.pick_and_feed_block_amount_form {
+    width: 100%;
+    border: 2px solid #929699;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
 .block_amount_form_number{
-    width: 268px;
+    width: 100%;
     height: 54px;
-    border: 1px solid #929699;
+    font-size: 26px;
+    border: none;
+    outline: none;
     background-color: transparent;
 }
+.dollar {
+    font-size: 26px;
+    color: #929699;
+    margin: 10px 5px 0 0;
+}
 
+/* Hidden arrows: Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Hidden arrows: Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 .pick_and_feed_block_regularity {
     margin: 25px auto 30px auto;
     width: 250px;
@@ -820,7 +844,7 @@ input::placeholder {
     width: 268px;
 }
 .block_amount_form_number {
-    width: 264px;
+    width: 100%;
     height: 52px;
     
 }
@@ -883,7 +907,7 @@ input::placeholder {
     }
     .block_amount_form_number {
         box-sizing: border-box;
-        width: 180px;
+        /*width: 180px;*/
         height: 42px;
     }
     .pick_and_feed_block_regularity {
