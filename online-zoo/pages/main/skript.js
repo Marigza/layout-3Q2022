@@ -70,3 +70,56 @@
 
     testimonialsThumb.addEventListener('click', thumbPosition);
 }());
+
+// pets slider
+
+/*(function () {
+    const petsTrack = document.querySelector('.pets_slider_track');
+    //const petsItem = document.querySelectorAll('.pets_slider_items')[0];
+    const buttonRight = document.querySelector('.button_slider_right');
+    const buttonLeft = document.querySelector('.button_slider_left');
+    const arrPets = ['cheetahs', 'crocodile', 'eagle', 'gorilla_moved', 'gorilla', 'Pandas', 'penguins', 'sloth'];
+    let trackRun
+    
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array
+    }
+    shuffle(arrPets)
+    let petsToShow = arrPets.slice(0, 6)
+    console.log(petsToShow)
+
+    if (window.innerWidth > 1200) {
+        trackRun = 1160
+    } if (window.innerWidth > 960 && window.innerWidth <= 1200) {
+        trackRun = 940
+    } if (window.innerWidth > 620 && window.innerWidth <= 960) {
+        trackRun = 600
+    }
+    console.log(trackRun)
+
+    buttonRight.addEventListener('click', () => {
+        if (petsTrack.style.left = `-${trackRun}px`) {
+            console.log(`-${trackRun}px`)
+            petsTrack.style.left = `-${trackRun}px`
+        } else if (petsTrack.style.left = 0) {
+            console.log(`0`)
+            petsTrack.style.left = `${trackRun}px`
+        } else if (petsTrack.style.left = `${trackRun}px`) {
+            console.log(`${trackRun}px`)
+            petsTrack.style.left = 0
+        }   
+    })
+    buttonLeft.addEventListener('click', () => {
+        if (petsTrack.style.left = '-' + trackRun + 'px') {
+            petsTrack.style.left = trackRun + 'px'
+        } else if (petsTrack.style.left = 0) {
+            petsTrack.style.left = '-' + trackRun + 'px'
+        } else if (petsTrack.style.left = trackRun + 'px') {
+            petsTrack.style.left = 0
+        }   
+    })
+}());*/
