@@ -24,41 +24,43 @@
 
 (function () {
     const donateAmounts = document.querySelectorAll('.pick_and_feed_block_scale_graf_form_input');
-    let donateNumber = document.querySelector('.block_amount_form_number');
-
-    //donateNumber.removeAttribute('value')
-    
+    let donateNumber = document.querySelector('.block_amount_form_number'); 
+    const inputs = document.querySelectorAll('input[type=number]');
+    //console.log(donateAmounts)
     donateNumber.value = 100
-    console.log(donateNumber.value)
+    //console.log(donateNumber.value)
 
-   
-    if (donateNumber.value.length > 4) {                    // ограничение длины ввода до 4х символов. пока не работает
-        return donateNumber.value.slice(0, 4)
-    }
-
-    let arrOfValues = [];                                       // создать массив из значений value
+    let arrOfValues = [];                                       
     for (let i = 0; i < donateAmounts.length; i++) {
         arrOfValues.push(donateAmounts[i].value);
     }
-    console.log(arrOfValues)
+    //console.log(arrOfValues)
 
-    if (arrOfValues.includes(donateNumber.value)) {             // если в массиве значений есть значение указанное в инпуте
-        for (let i = 0; i < donateAmounts.length; i++) {           // !!!надо куда-то воткнуть перезагрузку данных из инпута 
-            donateAmounts[i].removeAttribute('checked')
-        }
-        let index = arrOfValues.indexOf(donateNumber.value);    // то поставить массиву флаг checked
-        donateAmounts[index].setAttribute('checked', true)    // пока не работает такое условие (((
-    } else if (!arrOfValues.includes(donateNumber.value)) {
-        for (let i = 0; i < donateAmounts.length; i++) {
-            donateAmounts[i].removeAttribute('checked')
-        }
-    }
-    
-    for (let i = 0; i < donateAmounts.length; i++) {            // при нажатии на кружок value этого кружка попадает в поле инпут
+    Array.from(inputs).forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value > +input.max) {
+                input.value = +input.max;
+            };          
+        })
+    });
+  
+    Array.from(inputs).forEach(input => {
+        input.addEventListener('input', () => {
+            let index = arrOfValues.indexOf(input.value);
+            //console.log(index)
+            if (index >= 0) {
+                donateAmounts[index].checked = true;
+            } else if (index === -1) {
+                for (let radio of donateAmounts) {
+                    radio.checked = false;
+                }
+            } 
+        })
+    })
+
+    for (let i = 0; i < donateAmounts.length; i++) {         
         donateAmounts[i].addEventListener('click', () => {
-            //console.log(donateAmounts[i].value);               // добавить очистку значения в поле инпут
             donateNumber.value = donateAmounts[i].value;
-            console.log('amount = ' + donateNumber.value);
         })
     }
 }());
