@@ -47,3 +47,26 @@
         }
     }
 }());
+
+// testimonials slider
+
+(function () {
+    const testimonialsTrack = document.querySelector('.testimonials_feedbacks_track');
+    const testimonialsThumb = document.querySelector('input[type=range]');
+    let newValue
+
+    function thumbPosition() {
+        newValue = testimonialsThumb.value
+        let moveSize
+        if (window.innerWidth > 1200) {
+            moveSize = newValue * 297;
+        } else if (window.innerWidth >= 645 && window.innerWidth <= 1200) {
+            moveSize = newValue * 323;
+        } else if (window.innerWidth < 645) {
+            moveSize = newValue * 0;
+        }
+        testimonialsTrack.style.left = "-" + moveSize + "px"
+    }
+
+    testimonialsThumb.addEventListener('click', thumbPosition);
+}());

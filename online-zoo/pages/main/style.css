@@ -688,14 +688,17 @@ testimonials_block {
     height: 391px;
     overflow: hidden;
 }
-testimonials_feedbacks_item_close {
+.testimonials_feedbacks_item_close {
     display: none;
 }
 .testimonials_feedbacks_track {
     height: 100%;
+    width: fit-content;
     display: flex;
-    justify-content: space-between;
-    /*gap: calc(88px/3);*/
+    gap: 29px;
+    position: relative;
+    left: 0;
+    transition: all linear 0.8s;
 }
 
 .testimonials_feedbacks_item {
@@ -792,7 +795,7 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
     /*border: 0px solid #FFFFFF;*/
     height: 6px;
-    width: 115px;
+    width: 12.5%;
     border-radius: 3px;
     background: #FE9013;
     cursor: pointer;
@@ -819,7 +822,7 @@ input[type=range]::-moz-range-thumb {
     /*box-shadow: 0px 0px 0px #000031;
     border: 0px solid #FFFFFF;*/
     height: 6px;
-    width: 115px;
+    width: 12.5%;
     border-radius: 3px;
     background: #FE9013;
     cursor: pointer;
@@ -854,7 +857,7 @@ input[type=range]::-ms-thumb {
     /*box-shadow: 0px 0px 0px #000031;
     border: 0px solid #FFFFFF;*/
     height: 6px;
-    width: 115px;
+    width: 12.5%;
     border-radius: 3px;
     background: #FE9013;
     cursor: pointer;
@@ -1262,13 +1265,13 @@ input::placeholder {
         width: 390px;
     }
     input[type=range]::-webkit-slider-thumb {
-        width: 75px;
+        width: 12.5%;
     }
     input[type=range]::-moz-range-thumb {
-        width: 75px;
+        width: 12.5%;
     }
     input[type=range]::-ms-thumb {
-        width: 75px;
+        width: 12.5%;
     }
     .testimonials_button {
         margin-top: 43px;
@@ -1628,7 +1631,8 @@ input::placeholder {
     }
     .testimonials_feedbacks_container {
         margin-top: 30px;
-        height: fit-content;
+        height: 357px;
+        overflow: hidden;
         position: static;
         z-index: 8;
     }
